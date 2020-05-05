@@ -3,16 +3,16 @@ import Router from 'next/router';
 import HeaderWrapper from './headerWrapper';
 
 Router.onRouteChangeStart = () => {
-  NProgress.start();
+	NProgress.start();
 };
 Router.onRouteChangeComplete = () => {
-  NProgress.done();
+	NProgress.done();
 };
 
 Router.onRouteChangeError = () => {
-  NProgress.done();
+	NProgress.done();
 };
 
-const header = () => <HeaderWrapper>header</HeaderWrapper>;
+const header = () => <div />;
 
 export default header;

@@ -1,5 +1,5 @@
 import FooterWrapper from './footerWrapper';
 
-const footer = () => <FooterWrapper>footer</FooterWrapper>;
+const footer = () => <div />;
 
 export default footer;
