@@ -1,0 +1,13 @@
+query {
+  getUsers {
+    id
+    nom
+    prenom
+    username
+    email
+    password
+    confirmpassword
+    photo
+    agence
+    }
+  }
