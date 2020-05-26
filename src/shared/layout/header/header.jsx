@@ -1,18 +1,15 @@
-import NProgress from 'nprogress';
-import Router from 'next/router';
+import React from 'react';
 import HeaderWrapper from './headerWrapper';
+import Tabs from '../../../components/molecules/Tab';
 
-Router.onRouteChangeStart = () => {
-	NProgress.start();
+const header = () => {
+  return (
+    <HeaderWrapper>
+      <div className="nav">
+        <Tabs />
+      </div>
+    </HeaderWrapper>
+  );
 };
-Router.onRouteChangeComplete = () => {
-	NProgress.done();
-};
-
-Router.onRouteChangeError = () => {
-	NProgress.done();
-};
-
-const header = () => <div />;
 
 export default header;
