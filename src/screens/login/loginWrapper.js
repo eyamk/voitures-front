@@ -55,16 +55,16 @@ const LoginWrapper = styled.div`
 		margin-top: 40%;
 	}
 	.gmail {
-		display: flex;
-		justify-content: center;
-        width: 30%;
-        padding: 9px 3px;
-		font-size: 14px;
-		height: 50px;
-		margin-top: 10%;
 		
+        width: 60%;
+		left:-20px;
+        padding: 5px 3px;
+		font-size: 14px;
+		height: 50%;
+		margin-top: 20%; 
+		margin-left:20%;
         img {
-          width: 8%;
+          width: 10%;
           padding-right: 12px;
         }
       }
