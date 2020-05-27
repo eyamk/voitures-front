@@ -16,25 +16,31 @@ const Tabulation = () => {
           <Tab>Gestion des véhicule</Tab>
           <Tab>Mon Agence</Tab>
         </div>
-        <img src="static/social-media.png" onClick={() => setShow(!show)} />
-        <Panel>Acceuil</Panel>
-        <Panel>Gestion du Parc</Panel>
-        <Panel>Gestion des véhicule </Panel>
-        <Panel>Mon Agence</Panel>
-       
-        <Modal show={show} setShow={setShow}>
-          <div className="border-modal">
-            <p>Mes informations</p>
-            <p>Changer mon mot de passe</p>
-            <p>Mes connexions</p>
-            <div >
-              <p className="deconnect">
-  							Se déconnecter <img className="deconnect-photo" src="static/signs.png" />
-              </p>
-            </div>
-            <div />
+     
+        <div>
+          <img src="static/social-media.png" onClick={() => setShow(!show)} />
+          <div>
+            <Panel>Acceuil</Panel>
+            <Panel>Gestion du Parc</Panel>
+            <Panel>Gestion des véhicule </Panel>
+            <Panel>Mon Agence</Panel>
           </div>
-        </Modal>
+          <Modal show={show} setShow={setShow}>
+            <div className="border-modal">
+              <p>Mes informations</p>
+              <p>Changer mon mot de passe</p>
+              <p>Mes connexions</p>
+              <div className="deconnect">
+                <p >
+  							Se déconnecter <img className="deconnect-photo" src="static/signs.png" />
+                </p>
+              </div>
+              <div />
+            </div>
+          </Modal>
+
+        </div>
+       
        
 
       </Tabs> 

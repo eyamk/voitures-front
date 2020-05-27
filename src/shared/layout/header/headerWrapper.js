@@ -10,20 +10,23 @@ const HeaderWrapper = styled.header`
 		margin-left: 15%;
 		margin-right: 25%;
 	}
-	
+
 	.deconnect-photo {
-		width: 17%;
+		position: relative;
+		width: 15%;
 		margin-left: 8%;
-		margin-top: 12%;
+		margin-bottom:-5px;
+	
+		
 	}
 	.deconnect {
 		margin-top: 26%;
+		display:inline-block;
 	}
 	p {
-		font-size: 18px;
+		font-size: 16px;
 		font-family: Arial, Helvetica, sans-serif;
 		line-height: 1.8;
-		
 	}
 
 	.nav {
@@ -34,23 +37,22 @@ const HeaderWrapper = styled.header`
 	.modal {
 		position: relative;
 		width: 15%;
-		margin-left: 80%;
+		margin-left: 79%;
 		margin-top: -4%;
 	}
-	 img {
+	img {
 		margin-left: 73%;
 		width: 3%;
-		margin-top: -3%;
-	} 
+		margin-top: -6% ;
+	}
 	.border-modal {
-		padding-left:10px;
-		padding-top:20px;
-		height: 260px;
+		padding-left: 10px;
+		padding-top: 20px;
+		height: 250px;
 		border: 1px solid black;
 		text-align: left;
 		text-align-last: left;
-		width: 80%;
-	
+		width: 100%;
 	}
 
 	.modal-body {
