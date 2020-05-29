@@ -4,7 +4,7 @@ const LoginWrapper = styled.div`
 	.loginInput {
 		margin: 4% 0% 0% 33%;
 		width: 25%;
-		height: 550px;
+		height: 700px;
 		padding: 10px;
 		background-image: linear-gradient(to top, #06d9aa, #3eaedd);
 		align-content: center;
