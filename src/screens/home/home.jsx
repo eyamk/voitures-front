@@ -1,2 +1,2 @@
-const home = () => <div>HOME</div>;
+const home = () => <div></div>;
 export default home;
