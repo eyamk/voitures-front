@@ -18,9 +18,9 @@ class layout extends Component {
         <LayoutWrapper>
           <Reset />
           <Meta />
-          <Header />
+          {/* <Header /> */}
           {this.props.children}
-          <Footer /> 
+          {/* <Footer />  */}
         </LayoutWrapper>
       </ThemeProvider>
     );

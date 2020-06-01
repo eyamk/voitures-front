@@ -4,7 +4,7 @@ const LoginWrapper = styled.div`
 	.loginInput {
 		margin: 4% 0% 0% 33%;
 		width: 25%;
-		height: 550px;
+		height: 600px;
 		padding: 10px;
 		background-image: linear-gradient(to top, #06d9aa, #3eaedd);
 		align-content: center;
@@ -17,6 +17,7 @@ const LoginWrapper = styled.div`
 		border-width: 0 0 2px;
 		border-color: white;
 		background-color: transparent;
+		background:transparent;
 		width: 100%;
 		color: white;
 		font-size: 18px;
@@ -34,13 +35,40 @@ const LoginWrapper = styled.div`
 		justify-content: center;
 		margin-top: 10%;
 	}
-	button {
+	
+	.connection__error{
+		color:red;
+		font-size:14px;
+	}
+	.connection_error{
+		color:red;
+		font-size:18px;
+		margin-top:50px;
+		text-align:center;
+		font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	}
+	.loginButton {
 		font-size: 14px;
 		width: 50%;
 		height: 40px;
 		border-radius: 8%;
 		margin-top: 40%;
 	}
+	.gmail {
+		
+        width: 60%;
+		left:-20px;
+        padding: 5px 3px;
+		font-size: 14px;
+		height: 50%;
+		margin-top: 20%; 
+		margin-left:20%;
+        img {
+          width: 10%;
+          padding-right: 12px;
+        }
+      }
+	
 `;
 
 export default LoginWrapper;
