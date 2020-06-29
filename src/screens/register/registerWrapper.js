@@ -1,105 +1,109 @@
 import styled from 'styled-components';
 
 const RegisterWrapper = styled.div`
-	.registerInput {
-		margin: 2% 0% 0% 18%;
-		width: 60%;
-		height: 600px;
-		padding: 10px;
-		background-image: linear-gradient(to top, #06d9aa, #3eaedd);
-		align-content: center;
-		display: grid;
-	}
-
-	input[type="file"] {
-		display: none;
-	}
 	
-	img {
-		width: 10%;
-		height: 25px;
-		background:  url('https://simpleicon.com/wp-content/uploads/cloud-upload-2.png') 0% 0% no-repeat
-			padding-box;
+	.disable {
+		display: flex;
+	}
+	.part1 {
+		position: relative;
+		/* margin-top: 7%; */
+		/* background: #F2F2F2 0% 0% no-repeat padding-box; */
+		
+	}
+	.part2 {
+		position: relative;
+		left: 20%;
+		/* margin-top: 0; */
+	}
+	.background-image {
+		position: relative;
+	    width :25%;
+		left: 32%;
+	}
+	.image {
+		position: absolute;
+		width: 18%;
+		left: 35%;
+		top: 2%;	
 	}
 
 	input {
-		margin-top: 5%;
-		outline: 0;
-		border-width: 0 0 2px;
-		border-color: white;
-		background-color: transparent;
-		background: transparent;
-		width: 40%;
-		color: white;
+		background: #ffffff 0% 0% no-repeat padding-box;
+		border: 1px solid #707070;
+		border-radius: 25px;
+		opacity: 1;
+		width: 90%;
+		height:40px;
+		margin:3%;
 		font-size: 16px;
-		::placeholder {
-			color: white;
-		}
+		::placeholder { 
+         font-size: 20px;
+		 text-align:left;	 
+}
 	}
 
-	.btn {
-		display: flex;
-		justify-content: center;
-	}
+.background-image1{
+	position: relative;
+	height: 692px;
 
-	.btn-disable {
-		cursor: not-allowed;
-		pointer-events: none;
-		display: flex;
-		justify-content: center;
-		color: #c0c0c0;
+}
+.image1 {
+	position: absolute;
+	width: 76%;
+    left: 7%;
+    top: 18%;
+}
+	.registerButton{
+		position: relative;
+		width:60%;
+		height:50px;
+		top:40px;
+		left: 20%;
+        font: Bold 22px/27px Trebuchet MS;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        border-radius: 25px;
+        opacity: 1;
+        background-color:#2F3D73;
+        text-align:center;
+		cursor: pointer
 	}
-	button {
-		font-size: 14px;
-		width: 40%;
-		height: 40px;
-		border-radius: 8%;
-		margin-top: 2%;
-	}
-	.connection__error {
+	.connection__error__msg{
 		color: red;
+		position: relative;
+    top: 50px;
+    left: 32px;
 	}
-
-	label {
-		color: white;
+	/* label {
+		color: black;
 		font-size: 20px;
 		font-family: Georgia, serif;
 	}
-	.upload_photo {
-		position: relative;
-		bottom: 66%;
-		left: 57%;
-	}
-	 .list-agences {
-		color: white;
-		font-size: 20px;
-		position: relative;
-		bottom: 60%;
-		left: 57%;
-		width:30%;
-		font-family: Georgia, serif;
-		
 
-	}
-	.list{
-		font-size: 17px;
-		border: 1px solid white;
-		line-height:1.6;
-	}
-	select{
-		background-image: linear-gradient(to top, #06d9aa, #3eaedd);
-		border:none;
-		width:100%;
-		height:30px;
-		color:white;
-		font-size:18px;
-	}
-	option {
-		background-color: #3eaedd;
-		color: white;
-		font-size: 18px;
-	}
-
+	input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+	background: #ffffff 0% 0% no-repeat padding-box;
+		border: 1px solid #707070;
+		border-radius: 25px;
+		opacity: 1;
+		width: 90%;
+		height:40px;
+		margin:3%;
+		font-size: 16px;
+		::placeholder { 
+         font-size: 20px;
+		 text-align:left;	 
+}
+	
+} */
+	
 	
 `;
 

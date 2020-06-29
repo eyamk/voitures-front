@@ -38,7 +38,7 @@ const HeaderWrapper = styled.header`
 		position: relative;
 		width: 15%;
 		margin-left: 79%;
-		margin-top: -4%;
+		margin-top: -1%;
 	}
 	img {
 		margin-left: 73%;

@@ -1,0 +1,14 @@
+query GETCAR_BYID($id: ID!) {
+	getCarById(id: $id) {
+		id
+		photos
+		anneeAquisation
+		etat
+		vinyl
+		assurance
+		matricule
+		type
+		startDate
+		endDate
+	}
+}

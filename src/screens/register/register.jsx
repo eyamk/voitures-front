@@ -13,8 +13,9 @@ import * as Yup from 'yup';
 import RegisterWrapper from './registerWrapper';
 import REGISTER from '../../graphql/mutations/createUser.graphql';
 import GET_AGENCES from '../../graphql/queries/getAgences.graphql';
+import Chip from './chip';
 
-const AgenceItem = ({ item }) => <div>{item.nomAgence}</div>;
+// const AgenceItem = ({ item }) => <div>{item.nomAgence}</div>;
 
 const initialValues = {
   nom: '',
@@ -99,138 +100,151 @@ const register = () => {
         }}
       >
         {({ values, handleChange, handleBlur, errors, touched }) => (
-          <div className="registerInput">
-            <form onSubmit={(e) => handleRegister(e, values)}>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Nom"
-                  name="nom"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.nom}
-                />
-              </div>
-              {errors.nom && touched.nom && <small className="connection__error"> {errors.nom} </small>}
+          <div className='disable'>
+            <div className='part1'>
+              <img className='background-image1' src='static/Login.png' />
+              <img className='image1' src='static/bus.png'/>
+            </div>
+            <div className="registerInput part2">
+              <form onSubmit={(e) => handleRegister(e, values)}>
+                <img className='background-image' src='static/login Icon.png'/>
+                <img className='image' src='static/Tracé 594.png'/>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Nom"
+                    name="nom"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.nom}
+                  />
+                </div>
+                {errors.nom && touched.nom && <small className="connection__error"> {errors.nom} </small>}
 
-              <div>
-                <input
-                  type="text"
-                  placeholder="Prénom"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  name="prenom"
-                  value={values.prenom}
-                />
-              </div>
-              {errors.prenom &&
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Prénom"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="prenom"
+                    value={values.prenom}
+                  />
+                </div>
+                {errors.prenom &&
 							touched.prenom && <small className="connection__error"> {errors.prenom} </small>}
 
-              <div>
-                <input
-                  type="text"
-                  placeholder="Nom d'utilisateur"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  name="username"
-                  value={values.username}
-                />
-              </div>
-              {errors.username &&
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Nom d'utilisateur"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="username"
+                    value={values.username}
+                  />
+                </div>
+                {errors.username &&
 							// eslint-disable-next-line max-len
 							touched.username && <small className="connection__error"> {errors.username} </small>}
 
-              <div>
-                <input
-                  type="text"
-                  placeholder="Email"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  name="email"
-                  value={values.email}
-                />
-              </div>
-              {errors.email && touched.email ? (
-                <small className="connection__error">{errors.email}</small>
-              ) : null}
-              <div>
-                <input
-                  type={visible ? 'text' : 'password'}
-                  placeholder="Mot de passe"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  name="password"
-                  value={values.password}
-                />
-              </div>
-              {errors.password &&
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="email"
+                    value={values.email}
+                  />
+                </div>
+                {errors.email && touched.email ? (
+                  <small className="connection__error">{errors.email}</small>
+                ) : null}
+                <div>
+                  <input
+                    type={visible ? 'text' : 'password'}
+                    placeholder="Mot de passe"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="password"
+                    value={values.password}
+                  />
+                </div>
+                {errors.password &&
 							touched.password && <small className="connection__error"> {errors.password} </small>}
 
-              <div>
-                <input
-                  type={visible ? 'text' : 'password'}
-                  placeholder="Confirmation"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  name="confirmpassword"
-                  value={values.confirmpassword}
-                />
-              </div>
-              {errors.confirmpassword &&
-							touched.confirmpassword && (
-                <small className="connection__error">{errors.confirmpassword} </small>
-              )}
-
-              <div className="upload_photo">
-                <input
-                  accept="image/*"
-                  type="file"
-                  id="file"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  placeholder="Photo"
-                  name="photo"
-                  className="photoInput"
-                  value={values.photo}
-                />
-                {errors.photo &&
-								touched.photo && <small className="connection__error"> {errors.photo} </small>}
-
-                <label for="file">
-									upload photo
-                  <img src="/static/upload.png" alt="" />
-                </label>
-              </div>
-              <div className="list-agences">
-                <h4>Agence</h4>
                 <div>
-                  <select id="mySelect">
-                    {agences.map((el) => <option>{el.nomAgence}</option>)}
-                  </select>
+                  <input
+                    type={visible ? 'text' : 'password'}
+                    placeholder="Confirmation"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="confirmpassword"
+                    value={values.confirmpassword}
+                  />
                 </div>
-              </div>
+                {errors.confirmpassword &&
+							touched.confirmpassword && (
+                  <small className="connection__error">{errors.confirmpassword} </small>
+                )}
 
-              <div
-                className={
-                  values.nom !== '' &&
+                <div className="upload_photo">
+                  {/* <label class="custom-file-upload"> */}
+                  <input
+                    accept="image/*"
+                    type="file"
+                    id="file"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    placeholder="Photo"
+                    name="photo"
+                    className="photoInput"
+                    value={values.photo}
+                  />
+                  {/* Photo
+                  </label> */}
+                  {/*  {errors.photo &&
+								touched.photo && <small className="connection__error"> {errors.photo} </small>} */}
+
+                  {/* <label for="file">
+									upload photo
+                   <img src="/static/upload.png" alt="" /> 
+                </label> */}
+                </div>
+                {/* <div className="list-agences">
+                  <h4>Agence</h4>
+                  <div>
+                    <select  >
+                      {agences.map((el) => <option  value={el.id}>{el.nomAgence}</option>)}
+                    </select>
+                  </div>
+                </div>  */}
+
+              
+                <Chip />
+                <div
+                  className={
+                    values.nom !== '' &&
 									values.prenom !== '' &&
 									values.username !== '' &&
 									values.email !== '' &&
 									values.photo !== '' &&
 									values.password === values.confirmpassword &&
 									values.password.length >= 8 ? (
-                      'btn'
-                    ) : (
-                      'btn-disable'
-                    )
-                }
-              >
-                <button type="submit" value="upload">
+                        'btn'
+                      ) : (
+                        'btn-disable'
+                      )
+                  }
+                >
+                  <button type="submit" value="upload" className='registerButton'>
 									S'enregistrer
-                </button>
-              </div>
-              {error && <small className="connection__error">{error}</small>}
-            </form>
+                  </button>
+                </div>
+                {error && <small className="connection__error__msg">{error}</small>}
+              </form>
+            </div>
           </div>
         )}
       </Formik>

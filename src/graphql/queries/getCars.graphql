@@ -1,0 +1,12 @@
+query {
+  getCars {
+    id
+    anneeAquisation
+    photos
+    etat
+    vinyl
+    assurance
+    matricule
+    
+  }
+}

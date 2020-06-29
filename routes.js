@@ -7,4 +7,11 @@ const routes = require('next-routes');
 // pattern - Route pattern (like express, see path-to-regexp)
 // page - Page inside ./pages to be rendered
 
-module.exports = routes().add('home', '/home', 'home').add('login', '/login', 'login');
+module.exports = routes()
+  .add('home', '/home', 'home')
+  .add('login', '/login', 'login')
+  .add('register', '/register', 'register')
+  .add('accueil', '/accueil', 'accueil')
+  .add('cars', '/cars', 'cars')
+  .add('carDetails','/carDetails/:id','carDetails')
+  .add('loader', '/loader', 'loader');

@@ -1,6 +1,6 @@
 import withApollo from 'next-with-apollo';
 import ApolloClient from 'apollo-boost';
-// import resolvers from '../common/graphql';
+import resolvers from '../graphql/client/resolvers';
 
 function createClient({ headers }) {
   return new ApolloClient({
@@ -14,9 +14,9 @@ function createClient({ headers }) {
       });
     },
     // local data
-    // clientState: {
-    //   ...resolvers,
-    // },
+    clientState: {
+      ...resolvers,
+    },
   });
 }
 

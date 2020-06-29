@@ -4,6 +4,7 @@ import Tab from './Tab';
 import Panel from './Panel';
 import TabWrapper from './TabWrapper';
 import Modal from '../../../shared/layout/header/Modal';
+import CarsList from '../../../screens/cars/cars';
 
 const Tabulation = () => {
   const [ show, setShow ] = useState(false);
@@ -22,7 +23,7 @@ const Tabulation = () => {
           <div>
             <Panel>Acceuil</Panel>
             <Panel>Gestion du Parc</Panel>
-            <Panel>Gestion des véhicule </Panel>
+            <Panel> <CarsList /> </Panel>
             <Panel>Mon Agence</Panel>
           </div>
           <Modal show={show} setShow={setShow}>
